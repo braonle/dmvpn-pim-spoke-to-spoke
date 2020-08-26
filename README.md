@@ -1,5 +1,5 @@
 # Overwiew
-Supplementary materials for the article about DMVPN mcast spoke-to-spoke deployment on [foxnetlab.com](http://foxnetlab.com/index.php/articles)
+Supplementary materials for the article about DMVPN mcast spoke-to-spoke deployment on [foxnetlab.com](https://foxnetlab.com/index.php/181-spoke-to-spoke-multicast-in-dmvpn)
 
 # Topology
 ![topology.png](Topology.png)
