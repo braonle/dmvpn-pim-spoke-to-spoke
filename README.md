@@ -1,10 +1,10 @@
 # Introduction
 There are quite a few Configuration Guides and articles in the Internet that provide detailed explanation of DMVPN setup and operation. However, ![the best note about multicast over DMVPN I could find](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/sec_conn_dmvpn/configuration/xe-16/sec-conn-dmvpn-xe-16-book/sec-conn-dmvpn-summ-maps.html) did not shed any light on details of the process.
-> “In DMVPN, it is recommended to configure a Rendezvous Point (RP) at or behind the hub. If there is an IP multicast source behind a spoke, the ip pim spt-threshold infinity command must be configured on spokes to avoid multicast traffic going through spoke-to-spoke tunnels.”
+> *“In DMVPN, it is recommended to configure a Rendezvous Point (RP) at or behind the hub. If there is an IP multicast source behind a spoke, the ip pim spt-threshold infinity command must be configured on spokes to avoid multicast traffic going through spoke-to-spoke tunnels.”*
 
 # Topology
 Let’s try to find out what this restriction is about. Here is our lab topology:
-![img/topology.png](Topology.png)  
+![Topology.png](img/topology.png)  
 Just an ordinary DMVPN Phase 2 lab in GNS3. Loobacks on every router are used for emulating adjacent client LANs; also, RP is somewhat sensible to be placed on the Hub. For addressing, I consider: Hub = R1, Spoke1 = R2, Spoke2 = R3, Internet = R4.
 
 # Configuration
@@ -87,10 +87,10 @@ Reply to request 0 from 2.2.2.2, 156 ms..…
 Oops. It seems like the first packet is going through but all the rest are dropped somewhere along the way. Let’s take a look at the traffic capture at this moment:
 
 #### Spoke1
-![img/spoke.png](spoke.png) 
+![spoke.png](img/spoke.png) 
 
 #### Hub
-![img/hub.png](hub.png)  
+![hub.png](img/hub.png)  
 
 So Hub does not send any multicast after the initial packet. What is going on with the hub?  
 
