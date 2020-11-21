@@ -1,5 +1,5 @@
 # Introduction
-There are quite a few Configuration Guides and articles in the Internet that provide detailed explanation of DMVPN setup and operation. However, ![the best note about multicast over DMVPN I could find](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/sec_conn_dmvpn/configuration/xe-16/sec-conn-dmvpn-xe-16-book/sec-conn-dmvpn-summ-maps.html) did not shed any light on details of the process.
+There are quite a few Configuration Guides and articles in the Internet that provide detailed explanation of DMVPN setup and operation. However, [the best note about multicast over DMVPN I could find](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/sec_conn_dmvpn/configuration/xe-16/sec-conn-dmvpn-xe-16-book/sec-conn-dmvpn-summ-maps.html) did not shed any light on details of the process.
 > *“In DMVPN, it is recommended to configure a Rendezvous Point (RP) at or behind the hub. If there is an IP multicast source behind a spoke, the ip pim spt-threshold infinity command must be configured on spokes to avoid multicast traffic going through spoke-to-spoke tunnels.”*
 
 # Topology
